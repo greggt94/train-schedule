@@ -21,7 +21,6 @@ $("#submit").on("click", function(event) {
     var firstTime = $("#first_train_time").val().trim();
     var frequency = $("#frequency").val().trim();
 
-
     // Creates Object with user input variables
     var newTrain = {
         trainName: trainName,
@@ -54,5 +53,5 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey) {
 
   // Add each train's data into the table
   $("table > tbody").append("<tr><td>" + newTrainName + "</td><td>" + newDestination + "</td><td>" +
-  newFrequency + "</td><td>" + something + "</td><td>" + something + "</td></tr>");
+  newFrequency + "</td></tr>");
 });
